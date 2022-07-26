@@ -1,7 +1,7 @@
 # Xray-Classifier-Lungs TEE v1
 
 # Dapp Address Sidechain: 
-0x8326dec6de9546046de50b9fd77703ea9794f399
+0x3576a5396ffda70978b4ed4c053f478c474a159b
 
 # DISCLAIMER: CURRENTLY ONLY WORKS ON THE PROVIDED DATASET 
 Using images from the web will most likely give you false results.
