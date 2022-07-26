@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.b2625c6b.css">
+    <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js" integrity="sha256-Rp285XJihj7kOHOVu5dIWIvWFH6zxyEJ8Zmfu9dSEgo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>IExec Chest X-ray Classifier</title>
+</head>
+<body>
+    <nav class="navbar">
+        <img class="logo" src="/logo-white.a7716062.svg">
+        <span id="network-output">Not Connected</span>
+    </nav>
+
+    <!--Images banner-->
+    <div class="images">
+        <img class="sample-image" src="/sample-covid.bdaf97df.jpeg">
+        <img class="sample-image" src="/sample-pneumonia.40624220.jpeg">
+        <img class="sample-image" src="/sample-normal.c045903e.jpeg">
+        <img class="sample-image" src="/sample-covid-1.2a6f74d4.png">
+        <img class="sample-image" src="/sample-pneumonia-1.b2ba740b.png">
+        <img class="sample-image" src="/sample-normal-1.a933e49f.png">
+    </div>
+
+    <!--Intro section-->
+    <div class="container">
+        <div>
+            <h2>Classify your <span style="color: #F1B000">X-ray</span> image</h2>
+            <p>Detect Pneumonia or COVID-19 in images, using Confidential Computing
+                Powered by iExec. This Dapp uses a trained Dense Convolutional Neural Network in order to 
+                detect COVID-19 or Pneumonia based on an X-ray photo of a patient.
+            </p>
+            <button id="classify_button" style="background-color: #45aaf2; color: white;">Classify now</button>
+        </div>
+    </div>
+    <!--Two information boxes about iExec-->
+    <div class="iexec-information">
+        <div>
+            <h2 style="color: #45aaf2">Confidential</h2>
+            <h2>Computing</h2>
+            <p>Confidential Computing ensures computation confidentiality through mechanisms of memory encryption at 
+                the hardware level.</p>
+        </div>
+        <div>
+            <h2 style="color: #FFE600">iExec</h2> 
+            <h2>Blockchain</h2>
+            <p>The iExec network connects cloud resource sellers with cloud resource buyers, encouraging an ecosystem of 
+                decentralized and autonomous, privacy-preserving applications.</p>
+        </div>
+    </div>
+    <!--DenseNet Information-->
+    <div class="container">
+        <div>
+            <h2>Using a <span style="color: rgb(223, 68, 68)">Dense</span>Net</h2>
+            <p>This model uses a Dense Convolutional Network, where all layers are directly connected with each other as proposed in the paper </p>
+        </div>
+        <div class="denseimg">
+            <img src="/DenseNet.de76609d.png">
+        </div>
+    </div> 
+
+    <!--User can upload files and submit here-->
+    <div class="upload" id="uploadx">
+        <h2>Classify Your Image now!</h2>
+        <!--Form only accepts .png, .jpeg, and .jpg images-->
+        <form class="form" id="myForm">
+            <input type="file" accept="image/png, image/jpeg, image/jpg" id="myFile">
+            <button type="submit">Classify Image</button>
+        </form>
+        <div id="myProgress">
+            
+        </div>
+    </div> 
+
+    
+    <!--Result boxes will spawn in the results div-->
+    <div class="results">
+        <h2>See Your <span style="color:#F1B000;">Results</span></h2>
+    </div>
+    <div class="footer">
+        <p>Powered by <a href="https://iex.ec/">iExec</a></p>
+    </div>
+    <script src="/index.5d9dacde.js" defer=""></script>
+
+    <!--Animation for the main button-->
+    <script>$("#classify_button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#uploadx").offset().top
+    }, 600);
+});
+
+</script>
+</body>
+</html>
